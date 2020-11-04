@@ -8,19 +8,17 @@ args = parser.parse_args()
 
 def unzip(zip_path, save_dir='data/'):
     '''
-   Decompress the AKOA data and separate the left and right knees
-
-
+    Unzip AKOA data and divide it into left and right ends
     '''
     Z = ZipFile(zip_path)
-    # decompression
+    # Unzip the data
     for path in Z.namelist():
-        # decompress left knee
+        # Unzip left knee
         if 'left' in path.lower() or 'l_e_f_t' in path.lower():
             Z.extract(path, save_dir+'left')
 
     for path in Z.namelist():
-        # decompress right knee
+        # Unzip right knee
         if 'right' in path.lower() or 'r_i_g_h_t' in path.lower():
             Z.extract(path, save_dir+'right')
     Z.close()

@@ -13,8 +13,8 @@ class PathTF:
 
     def split_iter(self):
         n = len(self)
-        batch_size = int(tf.math.ceil(n/3))
-        # Disruption
+        batch_size = round(n/3)
+        # Shuffle
         path_ds = self.path_ds.shuffle(n)
         return path_ds.batch(batch_size)
 
@@ -45,6 +45,7 @@ class Dataset:
         right_ys = tf.ones(len(right_xs), dtype=tf.int64)
         xs = tf.concat((left_xs, right_xs), axis=0)
         ys = tf.concat((left_ys, right_ys), axis=0)
+        ys = tf.one_hot(ys, depth=2)
         paths = tf.data.Dataset.from_tensor_slices(xs)
         image_ds = paths.map(load_and_preprocess_image)
         label_ds = tf.data.Dataset.from_tensor_slices(ys)
@@ -53,7 +54,7 @@ class Dataset:
 
     def finish(self, image_label_ds, batch_size):
         # Set a shuffle buffer size that is consistent with the size of the dataset to ensure the data
-        # It's completely disrupted.
+        # It's completely shuffled.
         n = len(image_label_ds)
         ds = image_label_ds.shuffle(buffer_size=n)
         #ds = ds.repeat()
