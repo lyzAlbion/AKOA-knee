@@ -1,4 +1,5 @@
 #Akoa data classification
+
 ##1 data decompression and classification
 First, decompress the downloaded dataset with the following code, and store the left and right knees in different directories respectively:
 ```sh
