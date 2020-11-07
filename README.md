@@ -33,5 +33,5 @@ This file use MobileNet for transfer learning. However, the accuracy cannot fit 
 
 ## 3 visualization
 Effect picture on training set and test set:
-![](https://github.com/lyzAlbion/AKOA-knee/edit/main/output.png)
+![](https://github.com/lyzAlbion/AKOA-knee/blob/main/output.png)
 
