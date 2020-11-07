@@ -1,7 +1,8 @@
 Classify laterality of the OAI AKOA knee data set
+### student name: yuzhi Lu
+### student id: s4547009
 =====================================
 # File descriptions and use guide
-
 ## 1 Final version files
 ### unzip.py
 Unzip the raw dataset and save the left and right knee to different directory.
