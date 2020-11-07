@@ -1,4 +1,4 @@
-Classify laterality of the OAI AKOA knee data set
+# Classify laterality of the OAI AKOA knee data set
 ### student name: yuzhi Lu
 ### student id: s4547009
 =====================================
