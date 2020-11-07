@@ -31,7 +31,7 @@ This is the first version of my project including data unzip and split process.
 ### MobileNettest.ipynb
 This file use MobileNet for transfer learning. However, the accuracy cannot fit our need.
 
-##3 visualization
+## 3 visualization
 Effect picture on training set and test set:
-![](images/ output.png )
+![](https://github.com/lyzAlbion/AKOA-knee/edit/main/output.png)
 
